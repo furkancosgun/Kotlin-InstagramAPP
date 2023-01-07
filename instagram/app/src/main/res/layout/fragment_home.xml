@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_weight="2"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_instagram" />
+
+        <ImageView
+            android:id="@+id/btnGoStoryScreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/add_story"
+            android:src="@drawable/ic_add_box" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/liked_contents"
+            android:src="@drawable/ic_heart" />
+
+
+        <ImageView
+            android:id="@+id/btnGoMessages"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/messages"
+            android:src="@drawable/ic_chat" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStoryRenderer"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:padding="5dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContentRenderer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp" />
+
+
+</LinearLayout>
